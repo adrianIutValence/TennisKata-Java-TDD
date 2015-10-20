@@ -7,9 +7,9 @@ import org.junit.Test;
 public class TennisGameTest
 {
 	@Test
-	public void aSimpleBeginningTest()
-	{
-		Assert.fail("...");
+	public void weAreMakingSureThatAGameThatJustBegunReturnAScoreEqualsToTheSusdescribedStringLoveAll(){
+		TennisGame theTennisGameUnderTestRightNow = new TennisGame();
+		Assert.assertEquals(theTennisGameUnderTestRightNow.getScore(), "love-all");
+		
 	}
-
 }
