@@ -12,4 +12,11 @@ public class TennisGameTest
 		Assert.assertEquals(theTennisGameUnderTestRightNow.getScore(), "love-all");
 		
 	}
+	
+	@Test
+	public void weChangeTheScoreIfThePlayerThatServedWonAPointReturnEqualsToTheSusdescribedStringFifteenLove(){
+		TennisGame theTennisGameUnderTestRightNow = new TennisGame();
+		theTennisGameUnderTestRightNow.serverScores();
+		Assert.assertEquals(theTennisGameUnderTestRightNow.getScore(), "fifteen-love");
+	}
 }
