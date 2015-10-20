@@ -6,12 +6,39 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class TennisGameTest
-{
+{	
+	//TODO move all that in an enumeration
+	public static final int[][] SCORES = {{0,0},
+		{0,1},
+		{0,2},
+		{0,3},
+		{1,0},
+		{1,1},
+		{1,2},
+		{1,3},
+		{2,0},
+		{2,1},
+		{2,2},
+		{2,3},
+		{3,0},
+		{3,1},
+		{3,2}};
 	
-	public static final String LOVE_ALL = "love-all";
-	public static final String FIFTEEN_LOVE = "fifteen-love";	
-	public static final String LOVE_FIFTEEN = "love-fifteen";
-	public static final String FIFTEEN_ALL = "fifteen-all";
+	public static final String[] SCORES_STRING = {"love-all",
+		"love-fifteen",
+		"love-thirty",
+		"love-forty",
+		"fifteen-love",
+		"fifteen-all",
+		"fifteen-thirty",
+		"fifteen-forty",
+		"thirty-love",
+		"thirty-fifteen",
+		"thirty-all",
+		"thirty-forty",
+		"forty-love",
+		"forty-fifteen",
+		"forty-thirsty"};
 	
 	private TennisGame theTennisGameUnderTestRightNow;
 
@@ -20,27 +47,11 @@ public class TennisGameTest
 		this.theTennisGameUnderTestRightNow = new TennisGame();
 	}
 	
-	@Test
-	public void weAreMakingSureThatAGameThatJustBegunReturnAScoreEqualsToTheSusdescribedStringLoveAll(){
-		Assert.assertEquals(this.theTennisGameUnderTestRightNow.getScore(), TennisGameTest.LOVE_ALL);
-	}
 	
 	@Test
-	public void weChangeTheScoreIfThePlayerThatServedWonAPointReturnEqualsToTheSusdescribedStringFifteenLove(){
-		this.theTennisGameUnderTestRightNow.serverScores();
-		Assert.assertEquals(this.theTennisGameUnderTestRightNow.getScore(), TennisGameTest.FIFTEEN_LOVE);
-	}
-	
-	@Test
-	public void weChangeTheScoreIfThePlayerThatReceivedWonAPointReturnEqualsToTheSusdescribedStringFifteenLove(){
-		this.theTennisGameUnderTestRightNow.receiverScores();
-		Assert.assertEquals(this.theTennisGameUnderTestRightNow.getScore(), TennisGameTest.LOVE_FIFTEEN);
-	}
-	
-	@Test
-	public void aGameWithTheScoreFifteenToFifteenMustHaveAScoreEqualsToTheStringFeefteenAll(){
-		this.theTennisGameUnderTestRightNow.receiverScores();
-		this.theTennisGameUnderTestRightNow.serverScores();
-		Assert.assertEquals(this.theTennisGameUnderTestRightNow.getScore(), TennisGameTest.FIFTEEN_ALL);
+	public void allScoresBellowThreeToThreeShouldWorks(){
+		for (int[] score : SCORES) {
+			//TODO
+		}
 	}
 }
